@@ -16,6 +16,10 @@
     /* Gray 200 */
     --input-bg: #ffffff;
 
+    /* Gradients */
+    --wheel-bg: linear-gradient(135deg, #263B68 0%, #1D4F91 100%);
+    --gloss-overlay: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.05) 100%);
+
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -42,6 +46,9 @@ body.dark-mode {
     --primary-color: #3b82f6;
     /* Brighter Blue for Dark Mode */
     --primary-hover: #2563eb;
+
+    /* Dark Mode Gradient: Darker, deeper colors */
+    --wheel-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 /* Header & Toggle styles */
@@ -93,18 +100,32 @@ body {
 }
 
 /* Left Column: Wheel */
+/* Left Column: Wheel */
 .wheel-section {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #263B68 0%, #1D4F91 100%);
-    /* Experian Navy Gradient */
+    background: var(--wheel-bg);
+    /* Dynamic Gradient */
     position: relative;
     padding: 2rem;
     color: white;
     /* Ensure text on gradient is white */
+}
+
+/* Glossy Effect Overlay */
+.wheel-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gloss-overlay);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .wheel-container {
@@ -255,9 +276,11 @@ button {
 }
 
 .secondary-btn {
-    background-color: white;
+    background-color: var(--card-bg);
+    /* Dynamic background */
     border: 1px solid var(--border-color);
     color: var(--text-main);
+    /* Dynamic text color */
     padding: 0.5rem 0.75rem;
     border-radius: var(--radius-md);
     font-size: 0.875rem;
