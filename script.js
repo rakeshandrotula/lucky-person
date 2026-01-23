@@ -54,11 +54,47 @@ function init() {
     shuffleBtn.addEventListener('click', shuffleEntries);
     sortBtn.addEventListener('click', sortEntries);
 
+    // Theme Toggle
+    const themeToggleBtn = document.getElementById('themeToggle');
+    if (themeToggleBtn) { // Safety check
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+
+    // Load persisted theme
+    const savedTheme = localStorage.getItem('lucky_person_theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-mode');
+    }
+    updateThemeIcon();
+
     closeModalBtn.addEventListener('click', hideModal);
     spinAgainBtn.addEventListener('click', hideModal);
     removeWinnerBtn.addEventListener('click', removeWinnerAndClose);
 
     drawWheel();
+}
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('lucky_person_theme', isDark ? 'dark' : 'light');
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+
+    if (sunIcon && moonIcon) {
+        if (isDark) {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+    }
 }
 
 // --- Data Management ---
