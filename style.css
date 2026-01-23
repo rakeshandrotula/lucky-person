@@ -50,10 +50,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f8fafc;
-    /* Slate 50 */
+    background: linear-gradient(135deg, #263B68 0%, #1D4F91 100%);
+    /* Experian Navy Gradient */
     position: relative;
     padding: 2rem;
+    color: white;
+    /* Ensure text on gradient is white */
 }
 
 .wheel-container {
@@ -82,7 +84,8 @@ canvas#wheelCanvas {
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-right: 40px solid var(--text-main);
+    border-right: 40px solid #F6BF33;
+    /* Experian Gold for contrast */
     filter: drop-shadow(-2px 2px 4px rgba(0, 0, 0, 0.2));
     z-index: 10;
 }
@@ -97,7 +100,8 @@ canvas#wheelCanvas {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.02);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    /* Stronger shadow for separation */
     z-index: 20;
 }
 
