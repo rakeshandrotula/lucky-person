@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucky Person Picker</title>
+    <meta name="description"
+        content="A premium, free random name picker wheel. Enter names, spin the wheel, and pick a lucky winner with smooth animations and confetti effects. Perfect for raffles, contests, and decision making.">
+    <meta name="keywords"
+        content="random name picker, wheel of names, lucky draw, spinner wheel, random generator, raffle picker, contest winner, experian colors">
+    <meta name="author" content="Rakesh Androtula">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rakeshandrotula.github.io/luckyPerson/">
+    <meta property="og:title" content="Lucky Person Picker - Premium Random Name Generator">
+    <meta property="og:description"
+        content="Spin the wheel to pick a random winner! Features a modern design, realistic physics, and instant results.">
+    <meta property="og:image" content="https://rakeshandrotula.github.io/luckyPerson/screenshot.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rakeshandrotula.github.io/luckyPerson/">
+    <meta property="twitter:title" content="Lucky Person Picker - Premium Random Name Generator">
+    <meta property="twitter:description"
+        content="Spin the wheel to pick a random winner! Features a modern design, realistic physics, and instant results.">
+    <meta property="twitter:image" content="https://rakeshandrotula.github.io/luckyPerson/screenshot.png">
+
+    <link rel="canonical" href="https://rakeshandrotula.github.io/luckyPerson/">
+
+    <title>Lucky Person Picker - Random Name Generator Wheel</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Left Column: Wheel -->
@@ -31,17 +58,23 @@
                 <label for="namesInput">Names List</label>
                 <div class="input-actions">
                     <button id="shuffleBtn" class="secondary-btn" title="Shuffle Names">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l5 5M4 4l5 5"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l5 5M4 4l5 5" />
+                        </svg>
                         Shuffle
                     </button>
                     <button id="sortBtn" class="secondary-btn" title="Sort Names">
-                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 12h12M9 18h6"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 6h18M6 12h12M9 18h6" />
+                        </svg>
                         Sort
                     </button>
                 </div>
                 <textarea id="namesInput" placeholder="Enter names here, separated by new lines..."></textarea>
                 <div class="input-footer">
-                     <span id="entryCount">0 entries</span>
+                    <span id="entryCount">0 entries</span>
                 </div>
             </div>
 
@@ -67,4 +100,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
