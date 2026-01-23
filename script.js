@@ -6,8 +6,14 @@
 // --- Configuration ---
 const STORAGE_KEY = 'lucky_person_entries';
 const COLORS = [
-    '#FCA5A5', '#FDBA74', '#FDE047', '#86EFAC', '#67E8F9', '#93C5FD', '#C4B5FD', '#F0ABFC',
-    '#EF4444', '#F97316', '#EAB308', '#22C55E', '#06B6D4', '#3B82F6', '#A855F7', '#EC4899'
+    '#263B68', // Experian UK Navy
+    '#672078', // Deep Purple
+    '#E52079', // Vibrant Pink
+    '#1D4F91', // Medium Blue
+    '#9C27B0', // Purple Accent
+    '#F6BF33', // Experian Gold (Accent)
+    '#40B4E5', // Light Blue
+    '#D81B60'  // Berry Pink
 ];
 
 // --- State ---
@@ -63,7 +69,7 @@ function loadEntries() {
         namesInput.value = entries.join('\n');
     } else {
         // Default entries for first-time users
-        entries = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi'];
+        entries = ['Spiderman', 'Rambo', 'Superman', 'Wonder Woman', 'Antman', 'Hulk', 'Black Panther', 'Black Widow'];
         namesInput.value = entries.join('\n');
         saveEntries();
     }

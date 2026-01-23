@@ -1,11 +1,13 @@
 :root {
-    --primary-color: #6366f1;
-    /* Indigo 500 */
-    --primary-hover: #4f46e5;
-    /* Indigo 600 */
+    --primary-color: #263B68;
+    /* Experian UK Navy */
+    --primary-hover: #1D2D50;
+    /* Darker Navy */
     --secondary-bg: #f3f4f6;
     /* Gray 100 */
     --text-main: #1f2937;
+    /* Gray 800 */
+    /* Gray 800 */
     /* Gray 800 */
     --text-muted: #6b7280;
     /* Gray 500 */
