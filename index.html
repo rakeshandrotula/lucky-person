@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Person Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Column: Wheel -->
+        <main class="wheel-section">
+            <div class="wheel-container">
+                <canvas id="wheelCanvas"></canvas>
+                <div class="wheel-pointer"></div>
+            </div>
+            <div class="current-winner-display" id="currentWinner" aria-live="polite"></div>
+        </main>
+
+        <!-- Right Column: Controls -->
+        <aside class="controls-section">
+            <header>
+                <h1>Lucky Person</h1>
+                <p>Spin the wheel to pick a winner!</p>
+            </header>
+
+            <div class="input-group">
+                <label for="namesInput">Names List</label>
+                <div class="input-actions">
+                    <button id="shuffleBtn" class="secondary-btn" title="Shuffle Names">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l5 5M4 4l5 5"/></svg>
+                        Shuffle
+                    </button>
+                    <button id="sortBtn" class="secondary-btn" title="Sort Names">
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 12h12M9 18h6"/></svg>
+                        Sort
+                    </button>
+                </div>
+                <textarea id="namesInput" placeholder="Enter names here, separated by new lines..."></textarea>
+                <div class="input-footer">
+                     <span id="entryCount">0 entries</span>
+                </div>
+            </div>
+
+            <div class="action-group">
+                <button id="spinBtn" class="primary-btn">SPIN</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>We have a winner!</h2>
+            <div class="winner-name" id="winnerName"></div>
+            <div class="modal-actions">
+                <button id="removeWinnerBtn" class="secondary-btn">Remove Winner</button>
+                <button id="spinAgainBtn" class="primary-btn">Spin Again</button>
+            </div>
+        </div>
+        <div class="confetti-container" id="confettiDetails"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
