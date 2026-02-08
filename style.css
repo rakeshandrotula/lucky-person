@@ -23,7 +23,9 @@
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --font-family: 'Outfit', sans-serif;
+    --font-family: 'Space Mono', monospace;
+    --font-header: 'DotGothic16', sans-serif;
+    --font-ui: 'Space Mono', monospace;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
 }
@@ -178,11 +180,13 @@ canvas#wheelCanvas {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-family: var(--font-header);
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-main);
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 header p {
@@ -356,7 +360,8 @@ button {
 }
 
 .winner-name {
-    font-size: 3rem;
+    font-family: var(--font-header);
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--primary-color);
     margin-bottom: 2rem;
